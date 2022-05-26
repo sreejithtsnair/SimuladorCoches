@@ -3,10 +3,10 @@ package com.ricardo.models;
 public class Coche {
     private String marca;
     private String tipo;
-    private int velocidad;
-    private float CV;
+    protected int velocidad;
+    protected float CV;
 
-    private boolean encendido = false;
+    protected boolean encendido = false;
 
     public Coche(String marca, String tipo, int velocidad, float CV) {
         this.marca = marca;

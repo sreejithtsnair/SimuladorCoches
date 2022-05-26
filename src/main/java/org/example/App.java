@@ -1,17 +1,21 @@
 package org.example;
 
 import com.ricardo.models.Coche;
+import com.ricardo.models.Deportivo;
+import com.ricardo.models.Familiar;
+import com.ricardo.models.Todoterreno;
+import com.ricardo.utils.Ordenador;
 
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) {
-        final int DISTANCIA=100;
+        final int DISTANCIA = 100;
 
-        Coche coche1 = new Coche("Renault", "Berlina", 100, 90);
-        Coche coche2 = new Coche("Toyota", "4x4", 90, 120);
-        Coche coche3 = new Coche("Porsche", "Deportivo", 180, 120);
+        Familiar coche1 = new Familiar("Renault", "Berlina", 100, 90, 7);
+        Todoterreno coche2 = new Todoterreno("Toyota", "4x4", 90, 120, 2);
+        Deportivo coche3 = new Deportivo("Porsche", "Deportivo", 180, 120, true);
 
         coche1.arrancar();
         coche2.arrancar();
@@ -21,17 +25,10 @@ public class App {
         double tiempo2 = coche2.avanzar(DISTANCIA);
         double tiempo3 = coche3.avanzar(DISTANCIA);
 
-        System.out.println("Tiempos:" + tiempo1+" "+tiempo2+" "+tiempo3);
+        System.out.println("Tiempos:" + tiempo1 + " " + tiempo2 + " " + tiempo3);
 
-        String ganador = "";
-
-        if (tiempo1 < tiempo2 && tiempo1 < tiempo3) {
-            ganador = coche1.getMarca();
-        } else if (tiempo2 < tiempo1 && tiempo2 < tiempo3) {
-            ganador = coche2.getMarca();
-        }else if (tiempo3 < tiempo1 && tiempo3 < tiempo2) {
-            ganador = coche3.getMarca();
-        }
+        int idGanador = Ordenador.encontrarMasRapido(tiempo1, tiempo2, tiempo3);
+        String ganador = idGanador == 1 ? coche1.getMarca() : (idGanador == 2 ? coche2.getMarca() : coche3.getMarca());
 
         coche1.parar();
         coche2.parar();
