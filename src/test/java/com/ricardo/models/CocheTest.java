@@ -1,5 +1,6 @@
 package com.ricardo.models;
 
+import com.ricardo.models.coche.Coche;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

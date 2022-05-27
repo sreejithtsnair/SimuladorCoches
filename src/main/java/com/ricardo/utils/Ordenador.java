@@ -1,7 +1,5 @@
 package com.ricardo.utils;
 
-import com.ricardo.models.Coche;
-
 public class Ordenador {
     public static int encontrarMasRapido(double tiempo1,double tiempo2,double tiempo3){
         if (tiempo1 < tiempo2 && tiempo1 < tiempo3) {

@@ -1,4 +1,4 @@
-package com.ricardo.models;
+package com.ricardo.models.coche;
 
 public class Coche {
     private String marca;
@@ -9,23 +9,15 @@ public class Coche {
     protected boolean encendido = false;
 
     public Coche(String marca, String tipo, int velocidad, float CV) {
+        //validaciones
         this.marca = marca;
         this.tipo = tipo;
         this.velocidad = velocidad;
         this.CV = CV;
     }
-
-    public boolean arrancar() {
-        this.encendido = true;
-        return  true;
-    }
-    public double avanzar(int kms) {
-        if(this.encendido) return (double) kms / (double) this.velocidad * (CV / 100);
-        else return  Double.POSITIVE_INFINITY;
-    }
-    public boolean parar() {
-        this.encendido = false;
-        return  true;
+    
+    public boolean frenarDeGolpe(){
+        return true;
     }
 
     public String getMarca() {

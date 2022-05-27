@@ -1,9 +1,6 @@
 package org.example;
 
-import com.ricardo.models.Coche;
-import com.ricardo.models.Deportivo;
-import com.ricardo.models.Familiar;
-import com.ricardo.models.Todoterreno;
+import com.ricardo.models.coche.*;
 import com.ricardo.utils.Ordenador;
 
 /**
@@ -13,9 +10,10 @@ public class App {
     public static void main(String[] args) {
         final int DISTANCIA = 100;
 
-        Familiar coche1 = new Familiar("Renault", "Berlina", 100, 90, 7);
-        Todoterreno coche2 = new Todoterreno("Toyota", "4x4", 90, 120, 2);
-        Deportivo coche3 = new Deportivo("Porsche", "Deportivo", 180, 120, true);
+        CocheI coche1 = new Familiar("Renault", "Berlina", 100, 90, 7);
+        CocheI coche2 = new Todoterreno("Toyota", "4x4", 90, 120, 2);
+        CocheI coche3 = new Deportivo("Porsche", "Deportivo", 180, 120, true);
+        CocheI coche4 = new Buggie("Porsche", "Deportivo", 180, 120);
 
         coche1.arrancar();
         coche2.arrancar();
@@ -33,6 +31,7 @@ public class App {
         coche1.parar();
         coche2.parar();
         coche3.parar();
+        coche4.frenar();
 
         System.out.println("El ganador es:" + ganador);
 
