@@ -15,7 +15,7 @@ public class Coche {
         this.velocidad = velocidad;
         this.CV = CV;
     }
-    
+
     public boolean frenarDeGolpe(){
         return true;
     }

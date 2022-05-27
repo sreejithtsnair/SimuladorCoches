@@ -31,7 +31,6 @@ public class App {
         coche1.parar();
         coche2.parar();
         coche3.parar();
-        coche4.frenar();
 
         System.out.println("El ganador es:" + ganador);
 
