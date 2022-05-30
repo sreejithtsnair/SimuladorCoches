@@ -8,6 +8,8 @@ import java.util.List;
 
 public class AlmacenCoches {
     private static List<Coche> coches = new ArrayList();
+    List<Coche> coches2 = coches;
+
 
     //CRUD
     public static boolean addCoche(Coche coche) {
@@ -16,7 +18,16 @@ public class AlmacenCoches {
     }
 
     public static boolean removeCoche(Coche coche) {
-        return true;
+        boolean resultado = true;
+        if (coche == null) return false;
+        else for (Coche unCoche : coches) {
+            if (unCoche.getMarca().equals(coche.getMarca()) && unCoche.getTipo().equals(coche.getTipo())) {
+                coches.remove(unCoche);
+                break;
+            }
+        }
+
+        return resultado;
     }
 
     public static Coche getCoche(String marca, String tipo) {
@@ -24,7 +35,7 @@ public class AlmacenCoches {
 
         for (Coche unCoche : coches) {
             if (unCoche.getMarca().equals(marca) && unCoche.getTipo().equals(tipo)) {
-                resultado=unCoche;
+                resultado = unCoche;
                 break;
             }
         }
@@ -33,7 +44,15 @@ public class AlmacenCoches {
     }
 
     public static Coche updateCoche(Coche coche) {
-        return null;
+        Coche elCoche = getCoche(coche.getMarca(), coche.getTipo());
+        if (elCoche != null) {
+            elCoche.setCV(coche.getCV());
+            elCoche.setVelocidad(coche.getVelocidad());
+            return elCoche;
+        } else {
+            return null;
+        }
+
     }
 
     public static List<Coche> getCoches() {
