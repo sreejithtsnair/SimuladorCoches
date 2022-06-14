@@ -10,7 +10,6 @@ public class AlmacenCoches {
     private static List<Coche> coches = new ArrayList();
     List<Coche> coches2 = coches;
 
-
     //CRUD
     public static boolean addCoche(Coche coche) {
         coches.add(coche);
