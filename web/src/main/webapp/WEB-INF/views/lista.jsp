@@ -1,27 +1,24 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Coches</title>
-</head>
+<jsp:include page="head.jsp"/>
 
-<body>
+    <jsp:include page="nav_var.jsp">
+        <jsp:param name="page" value="lista"/>
+    </jsp:include>
+
     <h1>Lista Coches</h1>
-    <ul>
-        <c:forEach var="unCoche" items="${listaCoche}">
-            <li>
-                <div>${unCoche.marca}</div>
-                <div>${unCoche.tipo}</div>
-                <div>${unCoche.velocidad}</div>
-                <div>${unCoche.CV}</div>                
-            </li>
-       </c:forEach>
-    </ul>
 
-</body>
+    <c:forEach var="unCoche" items="${listaCoche}">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">${unCoche.marca}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${unCoche.tipo}</h6>
+                <p class="card-text">Vel: ${unCoche.velocidad}</p>
+                <p class="card-text">CV: ${unCoche.CV}</p>
+            </div>
+            </div>
+    </c:forEach>
 
-</html>
+    
+
+<jsp:include page="foot.jsp"/>
