@@ -16,7 +16,7 @@ public class Coche {
         this.CV = CV;
     }
 
-    public boolean frenarDeGolpe(){
+    public boolean frenarDeGolpe() {
         return true;
     }
 
@@ -61,5 +61,17 @@ public class Coche {
                 ", CV=" + CV +
                 ", encendido=" + encendido +
                 '}';
+    }
+
+    public boolean validate() {
+        if (marca != null &&
+                marca.length() > 3 &&
+                tipo != null &&
+                tipo.length() > 3 &&
+                velocidad > 0 &&
+                CV > 50
+        )
+            return true;
+        else return false;
     }
 }

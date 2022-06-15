@@ -20,7 +20,6 @@
                 <div>${unCoche.CV}</div>                
             </li>
        </c:forEach>
-
     </ul>
 
 </body>

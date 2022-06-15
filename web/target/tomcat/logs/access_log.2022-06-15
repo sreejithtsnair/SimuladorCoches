@@ -1,1 +1,10 @@
 0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:00:04 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 603 http-bio-8080-exec-2 1227
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:01:11 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 669 http-bio-8080-exec-5 160
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:02:37 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 728 http-bio-8080-exec-7 130
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:02:40 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 728 http-bio-8080-exec-9 3
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:02:40 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 728 http-bio-8080-exec-10 3
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:02:40 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 728 http-bio-8080-exec-10 1
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:03:49 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 500 3421 http-bio-8080-exec-6 363
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:04:34 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 492 http-bio-8080-exec-9 894
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:05:09 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 672 http-bio-8080-exec-10 194
+0:0:0:0:0:0:0:1 - - [15/Jun/2022:09:06:45 +0200] "GET /SimuladorCochesWeb/lista HTTP/1.1" 200 936 http-bio-8080-exec-3 144
