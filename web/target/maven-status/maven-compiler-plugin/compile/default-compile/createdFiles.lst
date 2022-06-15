@@ -1,10 +1,11 @@
-com\ricardo\models\coche\Buggie.class
 com\ricardo\persistencia\AlmacenCoches.class
-com\ricardo\models\coche\Deportivo.class
 com\ricardo\models\coche\Todoterreno.class
-com\ricardo\models\coche\Familiar.class
-com\ricardo\utils\Ordenador.class
 com\ricardo\models\coche\Ranchera.class
-com\ricardo\models\coche\CocheI.class
 com\ricardo\controllers\ListaController.class
 com\ricardo\models\coche\Coche.class
+com\ricardo\models\coche\Buggie.class
+com\ricardo\models\coche\Deportivo.class
+com\ricardo\models\coche\Familiar.class
+com\ricardo\utils\Ordenador.class
+com\ricardo\controllers\LogoutController.class
+com\ricardo\models\coche\CocheI.class
