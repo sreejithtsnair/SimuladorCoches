@@ -12,6 +12,9 @@
           <li class="nav-item">
             <a class="nav-link ${param.page=="create"?"":"active"} " href="./create">Alta</a>
           </li>          
+          <li class="nav-item">
+            <a class="nav-link ${param.page=="logout"?"":"active"} " href="./logout">Salir</a>
+          </li>          
           
         </ul>        
       </div>

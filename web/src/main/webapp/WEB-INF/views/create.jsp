@@ -1,4 +1,5 @@
 <jsp:include page="head.jsp" />
+
 <jsp:include page="nav_var.jsp">
     <jsp:param name="page" value="create" />
 </jsp:include>
