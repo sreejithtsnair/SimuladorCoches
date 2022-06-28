@@ -27,8 +27,8 @@ public class GestorCoches {
 
 
         System.out.println("Mostrando lista de coches....");
-        for (Coche unCoche : losCoches) {
-            System.out.println(unCoche);
+        for (Coche coche : losCoches) {
+            System.out.println(coche);
         }
 
         Coche cocheABorrar=new Coche("Renault","familiar",0,0);
