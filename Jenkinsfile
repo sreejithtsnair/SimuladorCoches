@@ -10,10 +10,12 @@ pipeline {
         stage('verify') {
             steps {
                 bat 'dir'
+                bat 'cd standalone'
             }
         }
         stage('Build') {
             steps {
+                bat 'dir'
                 echo 'Building..'
             }
         }
