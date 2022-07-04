@@ -10,18 +10,19 @@ pipeline {
         stage('verify') {
             steps {
                 bat 'dir'
+            }
+        }
+        stage('Build-test') {
+            steps {
                 bat 'cd standalone'
+                echo 'Clean Testing..'
+                bat 'mvn clean test'
             }
         }
         stage('Build') {
             steps {
-                bat 'dir'
                 echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
+                bat 'mvn package'
             }
         }
         stage('Deploy') {
