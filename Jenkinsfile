@@ -14,15 +14,19 @@ pipeline {
         }
         stage('Build-test') {
             steps {
-                bat 'cd standalone'
                 echo 'Clean Testing..'
-                bat 'mvn clean test'
+                dir ('standalone'){
+                    bat 'dir'
+                    bat 'mvn clean test'
+                }
             }
         }
         stage('Build') {
             steps {
                 echo 'Building..'
-                bat 'mvn package'
+                dir ('standalone'){
+                    bat 'mvn package'
+                }
             }
         }
         stage('Deploy') {
